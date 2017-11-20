@@ -1,2 +1,2 @@
-# day-one-repo
-day one repository
+# Bright events
+repository on event management
