@@ -18,6 +18,24 @@ def register():
 		new_user = User(user_name, password)
 		userData.append(new_user)
 		print('--------------------',userData)
-		return redirect('/')
+		return redirect('/login')
 	elif request.method == "GET":
 		return render_template("signup.html")
+
+
+
+@app.route('/login', methods=['GET', 'POST' ])
+def login():
+    if request.method == "POST":
+		user_name = request.form["username"]
+		password = request.form["password"]
+		for user in userData:
+			if ((user.user_name == user_name) and (user.password == password)):
+				print(user.user_name)
+				return render_template("listevents.html")
+			else:
+				print("username or password does not exist")
+    elif request.method == "GET":
+		return render_template("login.html")
+
+		
