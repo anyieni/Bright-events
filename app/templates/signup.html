@@ -3,17 +3,17 @@
 <html>
 <head>
 	<title>Bright Events</title>
-	<link rel="stylesheet" href="..\css\style.css" />
+	<link rel="stylesheet" href="..\static\css\style.css" />
 </head>
 <body>
 <div id="login">
-	<form style="align:center">
+	<form style="align:center" method="post" action="/signup">
 		<h2> Sign up</h2>
-		<input type="text" id="username" placeholder="Enter Username" />
-		<input type="password" id="pswd" placeholder="Enter Password" />
+		<input type="text" id="username" name="username" placeholder="Enter Username" />
+		<input type="password" id="pswd" name="password" placeholder="Enter Password" />
 		<input type="password" id="pswd-agn" placeholder="Enter Password Again" />
 
-		<input type="button" id="loginbtn" value="Sign up"/> 
+		<input type="submit" id="loginbtn" value="Sign up"/> 
 		<h4 > <a href="login.html" style="color:white">Sign in</a></h4>
 
 	</form>
